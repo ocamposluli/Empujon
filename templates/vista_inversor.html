@@ -1,0 +1,9 @@
+{% extends "base.html" %} 
+{% block content %}
+
+    {% for startup in startups %}
+        Nombre de la empresa: {{ startup.nombre_empresa }}
+        Descripcion de la Startup: {{ startup.descripcion }}
+
+    {% endfor %}
+{%endblock %}

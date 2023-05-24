@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <h1>Editar Formulario</h1>
+    <form action="/editarform/{{ usuario.id_startup }}" method="post">
+      <h3>Nombre de la Startup:</h3>
+      <input type="text" name="nombrestartup" value="{{ usuario.nombre_empresa }}" />
+      <br />
+      <input type="text" name="descripciondelastartup" value="{{ usuario.descripcion }}" />
+      <br />
+      <input type="text" name="equipofundador" value="{{ usuario.fundadores }}" />
+      <br />
+      <input type="text" name="modelodenegocio" value="{{ usuario.modelo_de_negocio }}" />
+      <br />
+      <input type="text" name="productoservicio" value="{{ usuario.producto_servicio }}" />
+      <br />
+      <input type="text" name="mercadocompetencia" value="{{ usuario.mercado_competencia }}" />
+      <br />
+      <input type="text" name="proyeccionfinanciera" value="{{ usuario.proyeccion_financiera }}" />
+      <br />
+      <input type="text" name="necesidadfinanciamiento" value="{{ usuario.necesidad_financiamiento }}" />
+      <br />
+      <input type="text" name="direccion" value="{{ usuario.direccion }}" />
+      <br />
+      <input type="text" name="correo" value="{{ usuario.contacto_correo }}" />
+      <br />
+      <input type="text" name="telefono" value="{{ usuario.contacto_telefono}}" />
+      <br />
+      <input type="submit" value="Actualizar"/>
+      <br>
+    </form>
+    <form action="/eliminando/{{ usuario.id_startup }}" method="post">
+      <input type="submit" value="Eliminar formulario" />
+    </form>
+  </body>
+</html>

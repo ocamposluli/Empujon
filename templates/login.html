@@ -1,0 +1,11 @@
+{% extends "base.html" %} 
+{% block content %}
+
+<h1>LOGIN</h1>
+<form action="/login" method ="post">
+    <input type="text" name="correo">
+    <input type="password" name="password">
+    <input type="submit">
+</form>
+
+{%endblock %}
