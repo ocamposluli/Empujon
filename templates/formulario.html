@@ -1,36 +1,137 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Formulario</h1>
-    <form action="/register_startup" method="post">
-      <input type="text" name="startup" placeholder="Nombre de la Startup" />
-      <br />
-      <input type="text" name="descripcion" placeholder="Descripcion de la Startup" />
-      <br />
-      <input type="text" name="equipo" placeholder="Equipo fundador" />
-      <br />
-      <input type="text" name="modelo" placeholder="Modelo de negocio" />
-      <br />
-      <input type="text" name="productoservicio" placeholder="Producto o Servicio" />
-      <br />
-      <input type="text" name="mercadocompetencia" placeholder="Mercado y Competencia" />
-      <br />
-      <input type="text" name="proyeccionfinanciera" placeholder="Proyecciones Financieras" />
-      <br />
-      <input type="text" name="necedidaddefinanciamiento" placeholder="Necesidades de Financiamiento" />
-      <br />
-      <input type="text" name="correo" placeholder="Correo Electronico" />
-      <br />
-      <input type="text" name="telefono" placeholder="Telefono de Contacto" />
-      <br>
-      <input type="text" name="direccion" placeholder="Direccion">
-      <input type="submit" />
-    </form>
-  </body>
-</html>
+{% extends 'base.html' %}
+
+{% block color %}
+<body class="bg-[#f8fafc]">
+{% endblock %}
+
+{% block contenido %}
+<div class="mx-auto ">
+
+  <form class="my-8 w-1/2 mx-auto">
+    <div class="space-y-12 p-3 rounded-xl bg-gradient-to-r from-gray-200 to-orange-200">
+              <!-- ### IMAGEN, NOMBRE Y FOTO DE PERFIL ###-->
+      <div>
+        <div class="col-span-full">
+          <label for="cover-photo" class="block text-sm font-medium leading-6 text-gray-900">Cover photo</label>
+          <div class="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10">
+            <div class="text-center">
+              <svg class="mx-auto h-12 w-12 text-gray-300" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M1.5 6a2.25 2.25 0 012.25-2.25h16.5A2.25 2.25 0 0122.5 6v12a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 18V6zM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0021 18v-1.94l-2.69-2.689a1.5 1.5 0 00-2.12 0l-.88.879.97.97a.75.75 0 11-1.06 1.06l-5.16-5.159a1.5 1.5 0 00-2.12 0L3 16.061zm10.125-7.81a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0z" clip-rule="evenodd" />
+              </svg>
+              <div class="mt-4 flex text-sm leading-6 text-gray-600">
+                <label for="file-upload" class="relative cursor-pointer rounded-md bg-white font-semibold text-black focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500 p-2">
+                  <span >Upload a file</span>
+                  <input id="file-upload" name="file-upload" type="file" class="sr-only">
+                </label>
+              </div>
+              <p class="text-xs leading-5 text-gray-600">PNG, JPG, GIF up to 10MB</p>
+            </div>
+          </div>
+        </div>
+    
+        
+  
+      </div>
+  
+      <!-- ### TERMINA DIV DE FOTO DE PERFIL-->
+  
+    <div>
+       <!--### RELLENO DE FORMULARIO###-->
+  
+       <div class="col-span-full">
+        <label for="street-address" class="block text-sm font-medium leading-6 text-gray-900">Nombre de la Startups</label>
+        <div class="mt-2">
+          <input type="text" name="street-address" id="street-address" autocomplete="street-address" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-[#f8fafc]">
+        </div>
+      </div>
+      
+       <div class="sm:col-span-3">
+            <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">Descripción de la empresa</label>
+            <div class="mt-2">
+              <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-[#f8fafc]">
+            </div>
+          </div>
+  
+  
+          <div class="sm:col-span-3">
+            <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">Equipo fundador</label>
+            <div class="mt-2">
+              <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-[#f8fafc]">
+            </div>
+          </div>
+  
+          <div class="sm:col-span-3">
+            <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">Modelo de negocio</label>
+            <div class="mt-2">
+              <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-[#f8fafc]">
+            </div>
+          </div>
+              <!--- ###TERMINA EL RELLENO DEL FORMULARIO###-->
+    </div>
+  
+  
+        <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+            <div class="col-span-full">
+                <label for="street-address" class="block text-sm font-medium leading-6 text-gray-900">Producto o servicio</label>
+                <div class="mt-2">
+                  <input type="text" name="street-address" id="street-address" autocomplete="street-address" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-[#f8fafc]">
+                </div>
+              </div>
+  
+  
+              <div class="col-span-full">
+                <label for="street-address" class="block text-sm font-medium leading-6 text-gray-900">Mercado y competencia</label>
+                <div class="mt-2">
+                  <input type="text" name="street-address" id="street-address" autocomplete="street-address" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-[#f8fafc]">
+                </div>
+              </div>
+  
+          
+  
+          <div class="col-span-full">
+            <label for="street-address" class="block text-sm font-medium leading-6 text-gray-900">Proyecciones financieras</label>
+            <div class="mt-2">
+              <input type="text" name="street-address" id="street-address" autocomplete="street-address" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-[#f8fafc]">
+            </div>
+          </div>
+
+          <div class="col-span-full">
+            <label for="street-address" class="block text-sm font-medium leading-6 text-gray-900">Necesidades financieras</label>
+            <div class="mt-2">
+              <input type="text" name="street-address" id="street-address" autocomplete="street-address" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-[#f8fafc]">
+            </div>
+          </div>  
+
+          <div class="col-span-full">
+            <label for="street-address" class="block text-sm font-medium leading-6 text-gray-900">Correo electrónico</label>
+            <div class="mt-2">
+              <input type="text" name="street-address" id="street-address" autocomplete="street-address" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-[#f8fafc]">
+            </div>
+          </div>
+
+          <div class="col-span-full">
+            <label for="street-address" class="block text-sm font-medium leading-6 text-gray-900">Teléfono de contactos</label>
+            <div class="mt-2">
+              <input type="text" name="street-address" id="street-address" autocomplete="street-address" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-[#f8fafc]">
+            </div>
+          </div>
+
+          <div class="col-span-full">
+            <label for="street-address" class="block text-sm font-medium leading-6 text-gray-900">Dirección</label>
+            <div class="mt-2">
+              <input type="text" name="street-address" id="street-address" autocomplete="street-address" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-[#f8fafc]">
+            </div>
+          </div>
+  
+    </div>
+  
+    <!--##BOTON DE CANCELAR O GUARDAR###--> 
+    <div class="mt-6 flex items-center justify-end gap-x-6">
+      <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Cancelar</button>
+      <button type="submit" class="rounded-md bg-orange-300 px-3 py-2 text-sm font-semibold text-black shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-300 ">Guardar</button>
+    </div>
+      <!--##TERMINA BOTON##-->
+  </form>
+
+</div>
+{% endblock %}

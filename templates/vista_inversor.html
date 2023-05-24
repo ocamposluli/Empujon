@@ -1,9 +1,198 @@
-{% extends "base.html" %} 
-{% block content %}
 
-    {% for startup in startups %}
-        Nombre de la empresa: {{ startup.nombre_empresa }}
-        Descripcion de la Startup: {{ startup.descripcion }}
+{% extends 'base.html' %}
+{% block color %}
+<body class="bg-gradient-to-r from-gray-200 to-orange-200">
+{% endblock %}
 
-    {% endfor %}
-{%endblock %}
+{% block contenido %}
+ <!--Primer boton de startup-->
+  <div class=" flex flex-row space-x-32 mx-14 my-10">
+    <ul role="list" >
+      <li class="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow">
+       <!--Estos son botones-->
+       <a href="/seleccionada/1">
+        <button>
+          <div class="flex flex-1 flex-col p-8 bg-gray-100 rounded-md">
+            <img class="mx-auto h-32 w-32 flex-shrink-0 rounded-full" src="{{ url_for('static', filename='startup_1.png')}}" alt="">
+            <h3 class="mt-6 text-sm font-medium text-gray-900">Helpers</h3>
+            <dl class="mt-1 flex flex-grow flex-col justify-between">
+              <dt class="sr-only">Title</dt>
+              <dd class="text-sm text-gray-500">Fundador: Mauro Aranda</dd>
+              <dt class="sr-only">Role</dt>
+            </dl>
+          </div>
+        </button>
+    </a>
+      </li>
+    </ul>
+
+    <!--Segundo boton -->
+    <ul role="list" >
+      <li class="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow">
+        <!--botones-->
+       <button>
+          <div class="flex flex-1 flex-col p-8 bg-gray-100 rounded-md">
+            <img class="mx-auto h-32 w-32 flex-shrink-0 rounded-full" src="../static/Star_2.jpg" alt="">
+            <h3 class="mt-6 text-sm font-medium text-gray-900">CompanyName</h3>
+            <dl class="mt-1 flex flex-grow flex-col justify-between">
+              <dt class="sr-only">Title</dt>
+              <dd class="text-sm text-gray-500">Fundador: Carlos Gomez</dd>
+              <dt class="sr-only">Role</dt>
+            </d1>
+          </div>
+        </button> 
+      </li>
+    </ul>
+
+    <!--Tercer boton-->
+    <ul role="list" >
+      <li class="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow">
+        <button>
+          <div class="flex flex-1 flex-col p-8 bg-gray-100 rounded-md">
+            <img class="mx-auto h-32 w-32 flex-shrink-0 rounded-full" src="../static/Star_3.jpg" alt="">
+            <h3 class="mt-6 text-sm font-medium text-gray-900">Scana</h3>
+            <dl class="mt-1 flex flex-grow flex-col justify-between">
+              <dt class="sr-only">Title</dt>
+              <dd class="text-sm text-gray-500">Fundador: Marta Gimenez</dd>
+              <dt class="sr-only">Role</dt>
+            </dl>
+          </div>
+      </button>
+      </li>
+    </ul>
+
+    <!--Cuarto boton-->
+    <ul role="list" >
+      <li class="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow">
+        <button>
+          <div class="flex flex-1 flex-col p-8 bg-gray-100 rounded-md">
+              <img class="mx-auto h-32 w-32 flex-shrink-0 rounded-full" src="../static/Star_4.jpg" alt="">
+              <h3 class="mt-6 text-sm font-medium text-gray-900">Maryto</h3>
+              <dl class="mt-1 flex flex-grow flex-col justify-between">
+                <dt class="sr-only">Title</dt>
+                <dd class="text-sm text-gray-500">Fundador: Mario Torres</dd>
+                <dt class="sr-only">Role</dt>
+              </dl>
+          </div>
+      </button>
+      </li>
+    </ul> 
+</div>
+
+<!--Tabla de abajo-->
+<div class=" flex flex-row space-x-32 mx-14 my-10">
+
+  <!--Primer boton-->
+  <ul role="list" >
+    <li class="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow">
+      <button>
+        <div class="flex flex-1 flex-col p-8 bg-gray-100 rounded-md">
+          <img class="mx-auto h-32 w-32 flex-shrink-0 rounded-full" src="../static/Star_5.jpg" alt="">
+          <h3 class="mt-6 text-sm font-medium text-gray-900">Unycorns</h3>
+          <dl class="mt-1 flex flex-grow flex-col justify-between">
+            <dt class="sr-only">Title</dt>
+            <dd class="text-sm text-gray-500">Fundador: Marcos Flores</dd>
+            <dt class="sr-only">Role</dt>
+          </dl>
+        </div>
+      </button>
+    </li>
+  </ul>
+
+  <!--Segundo boton-->
+  <ul role="list" >
+    <li class="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow">
+      <button>
+        <div class="flex flex-1 flex-col p-8 bg-gray-100 rounded-md">
+          <img class="mx-auto h-32 w-32 flex-shrink-0 rounded-full" src="../static/Star_6.png" alt="">
+          <h3 class="mt-6 text-sm font-medium text-gray-900">Startup Factory</h3>
+          <dl class="mt-1 flex flex-grow flex-col justify-between">
+            <dt class="sr-only">Title</dt>
+            <dd class="text-sm text-gray-500">Fundador: Luis Miguel A.</dd>
+            <dt class="sr-only">Role</dt>
+          </dl>
+        </div>
+    </button>
+    </li>
+  </ul>
+
+  <!--Tercer boton-->
+  <ul role="list" >
+    <li class="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow">
+      <button>
+        <div class="flex flex-1 flex-col p-8 bg-gray-100 rounded-md">
+          <img class="mx-auto h-32 w-32 flex-shrink-0 rounded-full" src="../static/Star_7.jpg" alt="">
+          <h3 class="mt-6 text-sm font-medium text-gray-900">Loyal Dog</h3>
+          <dl class="mt-1 flex flex-grow flex-col justify-between">
+            <dt class="sr-only">Title</dt>
+            <dd class="text-sm text-gray-500">Fundador: Nathalia Reyes</dd>
+            <dt class="sr-only">Role</dt>
+          </dl>
+        </div>
+      </button>
+    </li>
+  </ul>
+
+  <!--Cuarto boton-->
+  <ul role="list" >
+    <li class="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow">
+      <button>
+        <div class="flex flex-1 flex-col p-8 bg-gray-100 rounded-md">
+          <img class="mx-auto h-32 w-32 flex-shrink-0 rounded-full" src="../static/Star_8.png" alt="">
+          <h3 class="mt-6 text-sm font-medium text-gray-900">Fosterous </h3>
+          <dl class="mt-1 flex flex-grow flex-col justify-between">
+            <dt class="sr-only">Title</dt>
+            <dd class="text-sm text-gray-500">Fundador: Juan Pacheco</dd>
+            <dt class="sr-only">Role</dt>
+          </dl>
+        </div>
+      </button>
+    </li>
+  </ul> 
+</div>
+
+<div class="flex items-center justify-between border-t border-gray-200 bg-gradient-to-r from-gray-200 to-orange-200 px-4 py-3 sm:px-6">
+  <div class="flex flex-1 justify-between sm:hidden">
+    <a href="#" class="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Previous</a>
+    <a href="#" class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Next</a>
+  </div>
+  <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
+    <div>
+      <p class="text-sm text-gray-700">
+        Showing
+        <span class="font-medium">1</span>
+        to
+        <span class="font-medium">10</span>
+        of
+        <span class="font-medium">97</span>
+        results
+      </p>
+    </div>
+
+    <div>
+      <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
+        <a href="#" class="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
+          <span class="sr-only">Previous</span>
+          <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clip-rule="evenodd" />
+          </svg>
+        </a>
+        <!-- Current: "z-10 bg-indigo-600 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600", Default: "text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:outline-offset-0" -->
+        <a href="#" aria-current="page" class="relative z-10 inline-flex items-center bg-orange-300 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">1</a>
+        <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">2</a>
+        <a href="#" class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">3</a>
+        <span class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-700 ring-1 ring-inset ring-gray-300 focus:outline-offset-0">...</span>
+        <a href="#" class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">8</a>
+        <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">9</a>
+        <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">10</a>
+        <a href="#" class="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
+          <span class="sr-only">Next</span>
+          <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </nav>
+    </div>
+  </div>
+</div>
+{% endblock %}
