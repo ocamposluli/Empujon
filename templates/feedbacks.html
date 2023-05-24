@@ -1,0 +1,10 @@
+{% extends "base.html" %} 
+{% block content %}
+
+<h1>FEEDBACK</h1>
+<form action="/feedbacks/{{ id }}" method ="post">
+    <input type="text" name="feedbacks">
+    <input type="submit">
+</form>
+
+{%endblock %}
